@@ -74,8 +74,24 @@ export default function HeroSection() {
             Home With Smart<br />
             <span className="relative inline-block mt-2">
               Solar Energy
-              {/* Soft yellow highlight to make it pop elegantly */}
-              <span className="absolute bottom-2 left-0 w-full h-4 bg-[#FBC92E]/60 -z-10 rounded-sm" />
+              {/* Real-time animated highlighter scratch */}
+              <svg 
+                className="absolute bottom-1 lg:bottom-2 left-[-2%] w-[104%] h-[0.55em] -z-10 text-[#FBC92E]/80" 
+                viewBox="0 0 300 24" 
+                preserveAspectRatio="none"
+                fill="none" 
+              >
+                <motion.path 
+                  d="M5,12 Q150,2 295,8 Q150,22 10,14 Q150,2 285,16" 
+                  stroke="currentColor" 
+                  strokeWidth="8" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 1 }}
+                  transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
+                />
+              </svg>
             </span>
           </motion.h1>
 

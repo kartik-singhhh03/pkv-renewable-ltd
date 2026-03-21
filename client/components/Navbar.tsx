@@ -35,19 +35,19 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 xl:h-24">
           {/* Logo */}
           <motion.a
             href="/"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex-shrink-0 flex items-center pr-6 mr-2 transition-transform hover:scale-[1.02]"
+            className="flex-shrink-0 flex items-center pr-2 transition-transform hover:scale-[1.02]"
           >
             <img 
               src="/pkvlogo.png" 
               alt="PKV Renewable" 
-              className="h-16 md:h-20 w-auto object-contain scale-[1.3] md:scale-[1.8] origin-left" 
+              className="h-14 sm:h-16 lg:h-20 w-auto object-contain scale-[1.1] sm:scale-[1.2] lg:scale-[1.5] origin-left" 
             />
           </motion.a>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="hidden md:flex items-center gap-8"
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
           >
             {navItems.map((item, i) => (
               <motion.a
@@ -65,7 +65,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.07 }}
-                className="font-medium text-sm transition-all relative group text-gray-600 hover:text-solar-primary"
+                className="font-bold text-sm xl:text-base transition-all relative group text-gray-700 hover:text-solar-primary"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
@@ -78,20 +78,20 @@ export default function Navbar() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="hidden md:flex items-center gap-4"
+            className="hidden lg:flex items-center gap-3 xl:gap-5"
           >
             <a
               href="tel:+918149034478"
-              className="flex items-center gap-2 transition-colors text-sm font-bold text-gray-900 hover:text-solar-primary"
+              className="flex items-center gap-2 transition-colors text-sm xl:text-base font-bold text-gray-900 hover:text-solar-primary"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 xl:w-5 xl:h-5" />
               <span>+91 81490 34478</span>
             </a>
             <motion.a
               href="/#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-solar-primary text-white font-bold rounded-2xl shadow-md text-sm transition-all hover:bg-[#2b7255]"
+              className="px-5 py-2.5 xl:px-6 xl:py-3 bg-solar-primary text-white font-bold rounded-2xl shadow-md text-sm xl:text-base transition-all hover:bg-[#2b7255]"
             >
               Get Free Consultation
             </motion.a>
@@ -103,7 +103,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl backdrop-blur-sm transition-colors text-gray-900 bg-gray-100 hover:bg-gray-200"
+            className="lg:hidden p-2 rounded-xl backdrop-blur-sm transition-colors text-gray-900 bg-gray-100 hover:bg-gray-200"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </motion.button>

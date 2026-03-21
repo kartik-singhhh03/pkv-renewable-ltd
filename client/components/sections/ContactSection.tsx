@@ -41,14 +41,14 @@ export default function ContactSection() {
                 <motion.a key={i} href={c.href}
                   initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false, amount: 0.15 }}
                   whileHover={{ x: 5, boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}
-                  className="flex items-center gap-5 bg-white border border-gray-100 rounded-[1.5rem] p-6 transition-all group block shadow-sm">
+                  className="flex items-center gap-4 sm:gap-5 bg-white border border-gray-100 rounded-[1.5rem] p-5 sm:p-6 transition-all group block shadow-sm">
                   <div className={`w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:shadow-sm transition-all border border-transparent group-hover:border-gray-100`}>
                     <Icon className={`w-5 h-5 ${c.color}`} />
                   </div>
                   <div>
                     <p className="text-gray-900 font-bold text-base mb-1" style={{ fontFamily: 'Sora' }}>{c.title}</p>
                     {c.lines.map((l, j) => (
-                      <p key={j} className="text-gray-500 text-sm font-light">{l}</p>
+                      <p key={j} className="text-gray-500 text-xs sm:text-sm font-light">{l}</p>
                     ))}
                   </div>
                 </motion.a>
@@ -58,7 +58,7 @@ export default function ContactSection() {
 
           {/* Form */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }}
-            className="lg:col-span-3 bg-white border border-gray-100 rounded-[2.5rem] p-10 sm:p-12 shadow-[0_20px_80px_rgba(0,0,0,0.04)]">
+            className="lg:col-span-3 bg-white border border-gray-100 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-12 shadow-[0_20px_80px_rgba(0,0,0,0.04)]">
 
             {submitted ? (
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="h-full flex flex-col items-center justify-center text-center py-20">

@@ -129,15 +129,15 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.7, ease: "easeOut" }}
-            className="absolute -bottom-6 -left-6 lg:-left-12 bg-gradient-to-br from-white/95 to-[#FAFDFA]/95 backdrop-blur-2xl border border-white p-5 rounded-[2rem] shadow-[0_20px_50px_-10px_rgba(58,144,109,0.25)] flex items-center gap-4 transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_25px_60px_-10px_rgba(58,144,109,0.3)]"
+            className="absolute -bottom-6 left-2 sm:-left-6 lg:-left-12 z-20 bg-gradient-to-br from-white/95 to-[#FAFDFA]/95 backdrop-blur-2xl border border-white p-4 sm:p-5 rounded-[2rem] shadow-[0_20px_50px_-10px_rgba(58,144,109,0.25)] flex items-center gap-3 sm:gap-4 transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_25px_60px_-10px_rgba(58,144,109,0.3)]"
           >
              {/* Yellow Icon Circle */}
-             <div className="w-14 h-14 rounded-full bg-[#FBC92E]/15 flex items-center justify-center relative border border-[#FBC92E]/30">
-               <Zap className="w-6 h-6 text-[#d9a400]" />
+             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FBC92E]/15 flex items-center justify-center relative border border-[#FBC92E]/30 shrink-0">
+               <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#d9a400]" />
              </div>
-             <div className="pr-2">
-               <p className="text-3xl font-bold text-gray-900 leading-none" style={{ fontFamily: 'Sora' }}>650+</p>
-               <p className="text-[#3A906D] text-[11px] font-bold mt-1.5 uppercase tracking-widest leading-none">kW Installed</p>
+             <div className="pr-1 sm:pr-2">
+               <p className="text-2xl sm:text-3xl font-bold text-gray-900 leading-none" style={{ fontFamily: 'Sora' }}>650+</p>
+               <p className="text-[#3A906D] text-[10px] sm:text-[11px] font-bold mt-1.5 uppercase tracking-widest leading-none">kW Installed</p>
              </div>
           </motion.div>
 

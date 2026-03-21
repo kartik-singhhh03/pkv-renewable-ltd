@@ -42,14 +42,14 @@ export default function SubsidyPromoSection() {
 
         {/* Right Side: Visual/Card */}
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: false, amount: 0.15 }} className="lg:w-1/2 w-full relative">
-          <div className="bg-white p-10 sm:p-14 rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 text-center relative overflow-hidden group hover:shadow-[0_30px_80px_rgba(0,0,0,0.08)] transition-all">
-             <div className="absolute top-0 right-0 w-40 h-40 bg-solar-primary/5 rounded-bl-[100px] -z-10" />
-             <div className="w-20 h-20 bg-solar-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-inner">
-               <Landmark className="w-10 h-10 text-solar-primary" />
+          <div className="bg-white p-6 sm:p-10 lg:p-14 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 text-center relative overflow-hidden group hover:shadow-[0_30px_80px_rgba(0,0,0,0.08)] transition-all">
+             <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 bg-solar-primary/5 rounded-bl-[80px] sm:rounded-bl-[100px] -z-10" />
+             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-solar-primary/10 rounded-full flex items-center justify-center mx-auto mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+               <Landmark className="w-8 h-8 sm:w-10 sm:h-10 text-solar-primary" />
              </div>
-             <p className="text-gray-400 uppercase tracking-widest text-sm font-bold mb-3">Maximum Residential Subsidy</p>
-             <h3 className="text-6xl sm:text-7xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Sora' }}>₹78,000</h3>
-             <p className="text-gray-500 font-medium">For household rooftop systems 3kW and above anywhere in Bihar.</p>
+             <p className="text-gray-400 uppercase tracking-widest text-[#10px] sm:text-sm font-bold mb-2 sm:mb-3">Maximum Residential Subsidy</p>
+             <h3 className="text-[44px] sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-3 sm:mb-4" style={{ fontFamily: 'Sora' }}>₹78,000</h3>
+             <p className="text-gray-500 text-sm sm:text-base font-medium">For household rooftop systems 3kW and above anywhere in Bihar.</p>
           </div>
         </motion.div>
 

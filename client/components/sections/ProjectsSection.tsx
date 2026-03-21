@@ -49,14 +49,13 @@ export default function ProjectsSection() {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <h3 className="text-white font-bold text-xl leading-tight mb-2" style={{ fontFamily: 'Sora' }}>{p.title}</h3>
-                <p className="text-gray-200 text-sm mb-4 font-light">{p.loc}</p>
-                <motion.button
-                  initial={{ opacity: 0, y: 10 }} whileHover={{ opacity: 1, y: 0 }}
-                  className="opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2 text-white font-bold text-sm bg-white/20 backdrop-blur-md px-4 py-2 rounded-full hover:bg-white hover:text-gray-900">
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <h3 className="text-white font-bold text-lg sm:text-xl leading-tight mb-2" style={{ fontFamily: 'Sora' }}>{p.title}</h3>
+                <p className="text-gray-200 text-xs sm:text-sm mb-4 font-light">{p.loc}</p>
+                <div
+                  className="opacity-100 lg:opacity-0 lg:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2 text-white font-bold text-xs sm:text-sm bg-white/20 backdrop-blur-md px-4 py-2 rounded-full hover:bg-white hover:text-gray-900 w-max">
                   View Project <ChevronRight className="w-4 h-4" />
-                </motion.button>
+                </div>
               </div>
             </motion.div>
           ))}

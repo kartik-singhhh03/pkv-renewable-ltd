@@ -85,10 +85,10 @@ export default function CalculatorSection() {
                {/* Roof Type */}
                <div>
                  <label className="text-gray-600 mb-3 block text-sm font-bold uppercase tracking-wider ml-2">Roof Type</label>
-                 <div className="grid grid-cols-3 gap-3">
+                 <div className="grid grid-cols-3 gap-2 sm:gap-3">
                     {[['concrete', 'Concrete'], ['tin', 'Tin Shed'], ['asbestos', 'Asbestos']].map(([v, l]) => (
                       <button key={v} onClick={() => setRoofType(v)}
-                        className={`py-3.5 px-3 rounded-2xl text-sm font-semibold border-2 transition-all ${roofType === v
+                        className={`py-3 sm:py-3.5 px-1 sm:px-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-sm font-semibold border-2 transition-all ${roofType === v
                           ? 'border-solar-primary bg-solar-primary/5 text-solar-primary shadow-sm'
                           : 'border-transparent bg-white text-gray-500 shadow-sm hover:bg-gray-50'}`}>
                         {l}

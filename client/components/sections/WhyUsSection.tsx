@@ -32,9 +32,9 @@ export default function WhyUsSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
             viewport={{ once: false, amount: 0.15 }}
-            className="absolute -bottom-6 -right-6 lg:-right-10 bg-white/95 backdrop-blur-xl border border-gray-100 rounded-3xl p-6 shadow-2xl"
+            className="absolute -bottom-6 right-2 sm:-right-6 lg:-right-10 bg-white/95 backdrop-blur-xl border border-gray-100 rounded-3xl p-5 sm:p-6 shadow-2xl z-10"
           >
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <div className="text-center">
                 <p className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'Sora' }}>650+</p>
                 <p className="text-gray-500 text-xs mt-1 font-medium">kW Installed</p>

@@ -102,8 +102,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500 text-sm">
-          <p>© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
-          <div className="flex gap-6">
+          <p className="text-center sm:text-left">© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
             <a href="#" className="hover:text-solar-secondary transition-colors">Privacy</a>
             <a href="#" className="hover:text-solar-secondary transition-colors">Terms</a>
             <a href="#" className="hover:text-solar-secondary transition-colors">Sitemap</a>

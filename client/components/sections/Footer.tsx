@@ -165,7 +165,12 @@ export default function Footer() {
 
         {/* Subtle divider & Copyright */}
         <div className="border-t border-white/10 pt-8 mt-2 flex flex-col md:flex-row items-center justify-between gap-6 text-[#E6F4EF]/60 text-sm font-semibold">
-          <p className="text-center md:text-left">© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
+          <div className="text-center md:text-left space-y-1">
+            <p>© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
+            <p className="text-xs">
+              Crafted by <a href="https://www.linkedin.com/in/kartik-singh-879b6b288/" target="_blank" rel="noopener noreferrer" className="text-[#FBC92E] hover:text-[#ffda5c] hover:underline transition-colors font-bold">Kartik Singh</a>
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
             <Link to="/#privacy" className="hover:text-[#68B953] transition-colors">Privacy Policy</Link>
             <Link to="/#terms" className="hover:text-[#68B953] transition-colors">Terms of Service</Link>

@@ -4,7 +4,7 @@ import { Zap, CheckCircle, Award, Users } from 'lucide-react';
 const badges = [
   { icon: Award, text: 'MNRE Approved' },
   { icon: CheckCircle, text: 'DISCOM Certified' },
-  { icon: Zap, text: '650+ kW Installed' },
+  { icon: Zap, text: '2+ MW Installed' },
   { icon: Users, text: '100% Satisfaction' },
   { icon: Award, text: 'PM Surya Ghar Partner' },
   { icon: CheckCircle, text: 'End-to-End EPC' },

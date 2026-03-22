@@ -152,8 +152,8 @@ export default function HeroSection() {
                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#d9a400]" />
              </div>
              <div className="pr-1 sm:pr-2">
-               <p className="text-2xl sm:text-3xl font-bold text-gray-900 leading-none" style={{ fontFamily: 'Sora' }}>650+</p>
-               <p className="text-[#3A906D] text-[10px] sm:text-[11px] font-bold mt-1.5 uppercase tracking-widest leading-none">kW Installed</p>
+               <p className="text-2xl sm:text-3xl font-bold text-gray-900 leading-none" style={{ fontFamily: 'Sora' }}>2+</p>
+               <p className="text-[#3A906D] text-[10px] sm:text-[11px] font-bold mt-1.5 uppercase tracking-widest leading-none">MW Installed</p>
              </div>
           </motion.div>
 

@@ -16,7 +16,7 @@ export default function CtaSection() {
             Get your free site survey & detailed quote in Bihar.
           </p>
           <p className="text-solar-primary font-semibold text-lg mb-12">
-            PM Surya Ghar Subsidy up to ₹1,25,000 Available Now!
+            PM Surya Ghar Subsidy up to ₹78,000 Available Now!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -36,8 +36,8 @@ export default function WhyUsSection() {
           >
             <div className="flex items-center gap-4 sm:gap-6">
               <div className="text-center">
-                <p className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'Sora' }}>650+</p>
-                <p className="text-gray-500 text-xs mt-1 font-medium">kW Installed</p>
+                <p className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'Sora' }}>2+</p>
+                <p className="text-gray-500 text-xs mt-1 font-medium">MW Installed</p>
               </div>
               <div className="w-px h-12 bg-gray-200" />
               <div className="text-center">

@@ -16,9 +16,9 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/#whyus' },
+    { label: 'About', href: '/about' },
     { label: 'Services', href: '/#services' },
-    { label: 'Projects', href: '/#projects' },
+    { label: 'Projects', href: '/projects' },
     { label: 'Solar Subsidy', href: '/solar-subsidy' },
     { label: 'Contact', href: '/#contact' },
   ];

@@ -89,7 +89,7 @@ export default function Footer() {
               {[
                 'Residential Rooftop Solar', 
                 'Commercial Solar Systems', 
-                'Hybrid Solar Solutions', 
+                'Industrial Solar Solutions', 
                 'End-to-End EPC', 
                 'PM Surya Ghar Subsidy', 
                 'Net Metering Processing'

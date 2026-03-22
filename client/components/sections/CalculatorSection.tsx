@@ -10,7 +10,7 @@ export default function CalculatorSection() {
   const [roofType, setRoofType] = useState('concrete');
 
   // Real Indian Solar Calculation Logic
-  const units = bill / 8; // ₹8 average per unit
+  const units = bill / 7; // ₹7 average per unit
   const kw = Math.max(1, Math.round(units / 120)); // Assume 1kW ~ 120 units
   const systemCost = kw * 55000; // ₹55k per kW
   const subsidy = kw <= 1 ? 30000 : kw <= 2 ? 60000 : 78000; // Slab

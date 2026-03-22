@@ -18,7 +18,7 @@ function useCountUp(target: number, duration: number, inView: boolean) {
 }
 
 const stats = [
-  { value: 650, suffix: '+ kW', label: 'Solar Built', desc: 'Across Bihar residential' },
+  { value: 2, suffix: '+ MW', label: 'Solar Built', desc: 'Across Bihar residential' },
   { value: 30, suffix: '+', label: 'Projects Done', desc: 'Homes & institutions' },
   { value: 100, suffix: '%', label: 'Satisfaction', desc: 'Zero complaints so far' },
   { value: 80, suffix: '%', label: 'Bill Savings', desc: 'Average cost reduction' },

@@ -17,7 +17,7 @@ const services = [
     tagColor: 'text-[#3A906D] bg-white/95',
   },
   {
-    title: 'Hybrid Solar Systems',
+    title: 'Industrial Solar Systems',
     desc: 'Grid-tied + battery backup for 24/7 uninterrupted power supply.',
     img: 'https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=800',
     tag: '24/7 Power',

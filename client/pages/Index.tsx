@@ -9,6 +9,7 @@ import CalculatorSection from '../components/sections/CalculatorSection';
 import ProcessSection from '../components/sections/ProcessSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
 import FaqSection from '../components/sections/FaqSection';
+import LocationSection from '../components/sections/LocationSection';
 import CtaSection from '../components/sections/CtaSection';
 import ContactSection from '../components/sections/ContactSection';
 import Footer from '../components/sections/Footer';
@@ -29,6 +30,7 @@ export default function Index() {
       <ProcessSection />
       <ProjectsSection />
       <FaqSection />
+      <LocationSection />
       <CtaSection />
       <ContactSection />
       <Footer />

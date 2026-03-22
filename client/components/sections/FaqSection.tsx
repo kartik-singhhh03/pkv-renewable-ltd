@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     q: 'What is the PM Surya Ghar subsidy?',
-    a: 'Government of India provides ₹30,000 for 1 kW, ₹78,000 for 2 kW, and ₹1,25,000 for 3+ kW rooftop solar systems. PKV Renewable handles all paperwork and filing.',
+    a: 'Government of India provides ₹30,000 for 1 kW, ₹78,000 for 2 kW, and ₹78,000 for 3+ kW rooftop solar systems. PKV Renewable handles all paperwork and filing.',
   },
   {
     q: 'How much can I save on electricity in Bihar?',

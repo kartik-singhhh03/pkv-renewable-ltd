@@ -1,18 +1,76 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', service: '' });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [lastSubmitTime, setLastSubmitTime] = useState<number>(0);
+  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', service: '', honeypot: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    setError(null);
+
+    // Validation
+    if (!form.name.trim()) {
+      setError('Name is required');
+      return;
+    }
+    const phoneStripped = form.phone.replace(/\D/g, '');
+    if (phoneStripped.length !== 10) {
+      setError('Phone number must be exactly 10 digits');
+      return;
+    }
+    if (form.honeypot) {
+      // Anti-spam honey pot
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+      return;
+    }
+
+    const now = Date.now();
+    if (now - lastSubmitTime < 10000) {
+      setError('Please wait 10 seconds before requesting another quote.');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const resp = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          user_id: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: form.name.trim(),
+            phone: phoneStripped,
+            reply_to: form.email.trim() || 'Not provided',
+            service: form.service || 'Not specified',
+            message: form.message.trim() || 'No message'
+          }
+        })
+      });
+
+      if (!resp.ok) {
+        throw new Error('Failed to send. Please try calling us directly.');
+      }
+
+      setLastSubmitTime(now);
+      setSubmitted(true);
+      setForm({ name: '', phone: '', email: '', message: '', service: '', honeypot: '' });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err: any) {
+      setError(err?.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const inputCls = "w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:border-solar-primary focus:outline-none focus:ring-4 focus:ring-solar-primary/10 transition-all text-sm font-medium";
+  const inputCls = "w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:border-solar-primary focus:outline-none focus:ring-4 focus:ring-solar-primary/10 transition-all text-sm font-medium disabled:opacity-50";
 
   return (
     <section id="contact" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FAFDFA]">
@@ -70,25 +128,36 @@ export default function ContactSection() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <input type="text" placeholder="Full Name *" className={inputCls} value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} required />
-                  <input type="tel" placeholder="Phone (+91) *" className={inputCls} value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} required />
+                {error && (
+                  <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-red-600 bg-red-50 py-3 px-4 rounded-xl border border-red-100 text-sm font-bold">
+                    <AlertCircle className="w-4 h-4" /> {error}
+                  </motion.div>
+                )}
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 relative">
+                  <input type="text" placeholder="Full Name *" autoComplete="name" className={inputCls} value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} disabled={loading} required />
+                  <input type="tel" placeholder="Phone (+91) *" autoComplete="tel" className={inputCls} value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} disabled={loading} required />
+                  
+                  {/* Honeypot field for bots */}
+                  <input type="text" name="_gotcha" className="absolute top-0 left-0 h-0 w-0 opacity-0 z-[-1]" aria-hidden="true" tabIndex={-1} value={form.honeypot} onChange={e => setForm(f => ({ ...f, honeypot: e.target.value }))} />
                 </div>
-                <input type="email" placeholder="Email Address" className={inputCls} value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
-                <select className={inputCls} value={form.service} onChange={e => setForm(f => ({ ...f, service: e.target.value }))}>
+                <input type="email" placeholder="Email Address" className={inputCls} value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} disabled={loading} />
+                <select className={inputCls} value={form.service} onChange={e => setForm(f => ({ ...f, service: e.target.value }))} disabled={loading}>
                   <option value="">Select Service</option>
                   <option value="residential">Residential Solar (1–10 kW)</option>
                   <option value="commercial">Commercial Solar (10kW+)</option>
-                  <option value="hybrid">Hybrid System</option>
+                  <option value="hybrid">Industrial System</option>
                   <option value="epc">EPC Consultancy</option>
                 </select>
-                <textarea placeholder="Message (optional)" rows={4} className={inputCls + ' resize-none'} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
+                <textarea placeholder="Message (optional)" rows={4} className={inputCls + ' resize-none'} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} disabled={loading} />
 
                 <motion.button type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 bg-solar-primary text-white font-bold rounded-2xl flex items-center justify-center gap-2 text-base shadow-md transition-all pt-5 pb-5 mt-2">
-                  <Send className="w-5 h-5" /> Get Free Quote Now
+                  disabled={loading}
+                  whileHover={loading ? {} : { scale: 1.02 }}
+                  whileTap={loading ? {} : { scale: 0.98 }}
+                  className="w-full py-4 bg-solar-primary text-white font-bold rounded-2xl flex items-center justify-center gap-2 text-base shadow-md transition-all pt-5 pb-5 mt-2 disabled:opacity-75 disabled:cursor-not-allowed">
+                  {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Send className="w-5 h-5" />} 
+                  {loading ? 'Sending Request...' : 'Get Free Quote Now'}
                 </motion.button>
                 <p className="text-gray-400 text-xs text-center font-medium mt-4">⚡ We respond within 24 hours • No spam ever</p>
               </form>

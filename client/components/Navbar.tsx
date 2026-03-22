@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Phone } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,15 @@ export default function Navbar() {
     { label: 'Contact', href: '/#contact' },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only prevent default if it's an internal link
+    if (href.startsWith('/') || href.startsWith('#')) {
+      e.preventDefault();
+      setIsMobileMenuOpen(false);
+      navigate(href);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -37,19 +48,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 xl:h-24">
           {/* Logo */}
-          <motion.a
-            href="/"
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="flex-shrink-0 flex items-center pr-2 transition-transform hover:scale-[1.02]"
           >
-            <img 
-              src="/pkvlogo.png" 
-              alt="PKV Renewable" 
-              className="h-14 sm:h-16 lg:h-20 w-auto object-contain scale-[1.1] sm:scale-[1.2] lg:scale-[1.5] origin-left" 
-            />
-          </motion.a>
+            <Link to="/">
+              <img 
+                src="/pkvlogo.png" 
+                alt="PKV Renewable" 
+                className="h-14 sm:h-16 lg:h-20 w-auto object-contain scale-[1.1] sm:scale-[1.2] lg:scale-[1.5] origin-left" 
+              />
+            </Link>
+          </motion.div>
 
           {/* Menu Items - Desktop */}
           <motion.div
@@ -59,17 +71,21 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-6 xl:gap-8"
           >
             {navItems.map((item, i) => (
-              <motion.a
+              <motion.div
                 key={item.label}
-                href={item.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.07 }}
-                className="font-bold text-sm xl:text-base transition-all relative group text-gray-700 hover:text-solar-primary"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
-              </motion.a>
+                <a
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="font-bold text-sm xl:text-base transition-all relative group text-gray-700 hover:text-solar-primary"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
+                </a>
+              </motion.div>
             ))}
           </motion.div>
 
@@ -87,14 +103,18 @@ export default function Navbar() {
               <Phone className="w-4 h-4 xl:w-5 xl:h-5" />
               <span>+91 81490 34478</span>
             </a>
-            <motion.a
-              href="/#contact"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-5 py-2.5 xl:px-6 xl:py-3 bg-solar-primary text-white font-bold rounded-2xl shadow-md text-sm xl:text-base transition-all hover:bg-[#2b7255]"
             >
-              Get Free Consultation
-            </motion.a>
+              <a
+                href="/#contact"
+                onClick={(e) => handleNavClick(e, '/#contact')}
+                className="block px-5 py-2.5 xl:px-6 xl:py-3 bg-solar-primary text-white font-bold rounded-2xl shadow-md text-sm xl:text-base transition-all hover:bg-[#2b7255]"
+              >
+                Get Free Consultation
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -123,7 +143,7 @@ export default function Navbar() {
                   <a
                     key={item.label}
                     href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     className="block px-4 py-3.5 text-gray-700 hover:text-solar-primary hover:bg-gray-50 rounded-2xl transition-all font-bold text-base"
                     style={{ fontFamily: 'Sora' }}
                   >
@@ -139,7 +159,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href="/#contact"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, '/#contact')}
                     className="flex items-center justify-center w-full py-4 bg-solar-primary text-white font-bold rounded-2xl shadow-md"
                   >
                     Get Free Consultation

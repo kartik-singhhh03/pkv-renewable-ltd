@@ -46,7 +46,7 @@ export default function SolarSubsidy() {
              Switch to rooftop solar with government support under PM Surya Ghar Yojana. Get up to <strong className="text-gray-900 bg-[#FBC92E]/40 px-1.5 py-0.5 rounded-md">₹78,000</strong> directly credited.
            </motion.p>
            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-             <a href="/#contact" className="px-9 py-4 bg-solar-primary text-white font-bold rounded-full shadow-[0_10px_20px_rgba(58,144,109,0.2)] hover:shadow-[0_15px_30px_rgba(58,144,109,0.3)] hover:-translate-y-1 transition-all">Get Free Consultation</a>
+             <Link to="/#contact" className="px-9 py-4 bg-solar-primary text-white font-bold rounded-full shadow-[0_10px_20px_rgba(58,144,109,0.2)] hover:shadow-[0_15px_30px_rgba(58,144,109,0.3)] hover:-translate-y-1 transition-all">Get Free Consultation</Link>
              <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener noreferrer" className="px-9 py-4 bg-white border-2 border-gray-200 text-gray-900 font-bold rounded-full hover:bg-gray-50 transition-all hover:-translate-y-1">Apply for Subsidy</a>
            </motion.div>
         </div>
@@ -171,7 +171,7 @@ export default function SolarSubsidy() {
            <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+918149034478" className="px-8 py-4 bg-gray-900 text-white font-bold rounded-full hover:bg-black hover:shadow-lg transition-all hover:-translate-y-1">Call Now</a>
               <a href="https://wa.me/918149034478" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#1fae54] hover:shadow-lg transition-all hover:-translate-y-1">WhatsApp</a>
-              <a href="/#contact" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 font-bold rounded-full hover:bg-gray-50 hover:shadow-md transition-all hover:-translate-y-1">Get Free Quote</a>
+              <Link to="/#contact" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 font-bold rounded-full hover:bg-gray-50 hover:shadow-md transition-all hover:-translate-y-1">Get Free Quote</Link>
            </div>
          </div>
       </section>

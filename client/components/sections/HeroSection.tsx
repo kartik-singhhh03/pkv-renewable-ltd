@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HERO_BG = 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1920';
 const HERO_CARD = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=900';
@@ -106,16 +107,16 @@ export default function HeroSection() {
 
           {/* BUTTONS */}
           <motion.div variants={iV} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a href="#contact"
+            <Link to="/#contact"
               className="flex items-center justify-center px-9 py-4 bg-[#3A906D] text-white font-bold rounded-full shadow-[0_10px_20px_rgba(58,144,109,0.2)] text-base transition-all hover:shadow-[0_15px_30px_rgba(58,144,109,0.3)] hover:-translate-y-1 active:scale-95"
             >
               Get Free Quote
-            </a>
-            <a href="#calculator"
+            </Link>
+            <Link to="/#calculator"
               className="flex items-center justify-center px-9 py-4 border-[1.5px] border-gray-200 text-gray-900 font-bold rounded-full transition-all text-base hover:border-gray-300 hover:bg-gray-50 active:scale-95 bg-white shadow-sm"
             >
               Calculate Savings
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 

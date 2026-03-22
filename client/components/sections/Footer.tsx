@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, CheckCircle2, ArrowUp } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -51,8 +53,13 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-3 pt-4">
-              {['FB', 'IG', 'YT', 'WA'].map(s => (
-                <motion.a key={s} href="#" whileHover={{ scale: 1.15, y: -2 }}
+              {[
+                { s: 'FB', h: 'javascript:void(0)' }, 
+                { s: 'IG', h: 'javascript:void(0)' }, 
+                { s: 'YT', h: 'javascript:void(0)' }, 
+                { s: 'WA', h: 'https://wa.me/918149034478' }
+              ].map(({ s, h }) => (
+                <motion.a key={s} href={h} target={s === 'WA' ? '_blank' : '_self'} rel="noopener noreferrer" whileHover={{ scale: 1.15, y: -2 }}
                   className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#E6F4EF] text-sm font-bold hover:bg-[#68B953] hover:border-[#68B953] hover:text-white transition-all shadow-sm">
                   {s}
                 </motion.a>
@@ -65,18 +72,18 @@ export default function Footer() {
             <h4 className="text-white font-black mb-6 text-base tracking-widest">QUICK LINKS</h4>
             <ul className="space-y-4">
               {[
-                { l: 'Home', h: '#home' },
-                { l: 'About Us', h: '#about' },
-                { l: 'Why Choose Us', h: '#about' },
-                { l: 'Our Portfolio', h: '#projects' },
-                { l: 'Solar Calculator', h: '#calculator' },
-                { l: 'Contact Support', h: '#contact' },
+                { l: 'Home', h: '/' },
+                { l: 'About Us', h: '/about' },
+                { l: 'Why Choose Us', h: '/about' },
+                { l: 'Our Portfolio', h: '/projects' },
+                { l: 'Solar Calculator', h: '/#calculator' },
+                { l: 'Contact Support', h: '/#contact' },
               ].map(({ l, h }) => (
                 <li key={l}>
-                  <a href={h} className="text-[#E6F4EF]/80 hover:text-[#68B953] transition-colors text-[15px] flex items-center gap-2 group font-semibold">
+                  <Link to={h} className="text-[#E6F4EF]/80 hover:text-[#68B953] transition-colors text-[15px] flex items-center gap-2 group font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#68B953] opacity-0 group-hover:opacity-100 transition-opacity" />
                     {l}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -95,10 +102,10 @@ export default function Footer() {
                 'Net Metering Processing'
               ].map(s => (
                 <li key={s}>
-                  <a href="#services" className="text-[#E6F4EF]/80 hover:text-[#68B953] transition-colors text-[15px] flex items-center gap-2 group font-semibold">
+                  <Link to="/#services" className="text-[#E6F4EF]/80 hover:text-[#68B953] transition-colors text-[15px] flex items-center gap-2 group font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#68B953] opacity-0 group-hover:opacity-100 transition-opacity" />
                     {s}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -144,7 +151,8 @@ export default function Footer() {
 
             {/* Prominent CTA */}
             <motion.a 
-              href="#contact"
+              href="/#contact"
+              onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-max lg:w-full text-center px-7 py-4 bg-[#FBC92E] text-gray-900 font-black rounded-2xl shadow-[0_10px_20px_rgba(251,201,46,0.2)] hover:bg-[#ffda5c] hover:shadow-[0_15px_30px_rgba(251,201,46,0.3)] transition-all text-sm uppercase tracking-wider border-2 border-transparent hover:border-white/20"
@@ -159,9 +167,9 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 mt-2 flex flex-col md:flex-row items-center justify-between gap-6 text-[#E6F4EF]/60 text-sm font-semibold">
           <p className="text-center md:text-left">© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
-            <a href="#" className="hover:text-[#68B953] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#68B953] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#68B953] transition-colors">Sitemap</a>
+            <Link to="/#privacy" className="hover:text-[#68B953] transition-colors">Privacy Policy</Link>
+            <Link to="/#terms" className="hover:text-[#68B953] transition-colors">Terms of Service</Link>
+            <Link to="/#sitemap" className="hover:text-[#68B953] transition-colors">Sitemap</Link>
           </div>
         </div>
 

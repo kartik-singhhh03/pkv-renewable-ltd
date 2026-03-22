@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const WHY_IMG = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800';
 
@@ -16,6 +17,8 @@ const cV = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { stagge
 const iV = { hidden: { opacity: 0, y: 25 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const } } };
 
 export default function WhyUsSection() {
+  const navigate = useNavigate();
+
   return (
     <section id="about" className="py-28 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -77,7 +80,8 @@ export default function WhyUsSection() {
           </motion.div>
 
           <motion.div variants={iV} className="pt-4">
-            <motion.a href="#contact"
+            <motion.a href="/#contact"
+              onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}
               whileHover={{ scale: 1.02, boxShadow: '0 10px 30px rgba(58,144,109,0.2)' }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-solar-primary text-white font-bold rounded-2xl shadow-lg text-base">

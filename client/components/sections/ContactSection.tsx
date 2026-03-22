@@ -91,8 +91,8 @@ export default function ContactSection() {
             {[
               { icon: Phone, title: 'Call Us', lines: ['+91 81490 34478', 'Mon–Sat, 9am–7pm'], href: 'tel:+918149034478', color: 'text-solar-primary' },
               { icon: Mail, title: 'Email Us', lines: ['pkvrenewable@gmail.com', 'Response within 24 hours'], href: 'mailto:pkvrenewable@gmail.com', color: 'text-blue-500' },
-              { icon: MapPin, title: 'Patna Office', lines: ['Patna, Bihar', 'Serving all districts'], href: '#', color: 'text-solar-primary' },
-              { icon: MapPin, title: 'Siwan Office', lines: ['Siwan, Bihar', 'West Bihar coverage'], href: '#', color: 'text-purple-500' },
+              { icon: MapPin, title: 'Patna Office', lines: ['Patna, Bihar', 'Serving all districts'], href: 'https://maps.app.goo.gl/Du83tiKCWSdrMDRW6', color: 'text-solar-primary' },
+              { icon: MapPin, title: 'Siwan Office', lines: ['Siwan, Bihar', 'West Bihar coverage'], href: 'https://maps.app.goo.gl/Du83tiKCWSdrMDRW6', color: 'text-purple-500' },
             ].map((c, i) => {
               const Icon = c.icon;
               return (

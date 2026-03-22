@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const WHY_IMG = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800';
+const WHY_IMG = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70';
 
 const points = [
   'MNRE & DISCOM Compliant Systems',
@@ -26,7 +26,7 @@ export default function WhyUsSection() {
         <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
           viewport={{ once: false, amount: 0.15 }} className="relative group">
           <div className="relative h-[560px] rounded-[2rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100">
-            <img src={WHY_IMG} alt="Solar installation team Bihar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 hover:opacity-95" />
+            <img src={WHY_IMG} alt="Solar installation team Bihar" width="800" height="1100" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 hover:opacity-95" />
           </div>
 
           {/* Floating stats card */}

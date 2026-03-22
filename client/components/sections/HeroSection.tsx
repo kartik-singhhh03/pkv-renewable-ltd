@@ -3,8 +3,8 @@ import { useRef } from 'react';
 import { Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const HERO_BG = 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1920';
-const HERO_CARD = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=900';
+const HERO_BG = 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1920&fm=webp&q=70';
+const HERO_CARD = 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=900&fm=webp&q=70';
 
 const iV = { hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const } } };
 const badgeV = { hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' as const } } };
@@ -23,6 +23,10 @@ export default function HeroSection() {
          <motion.img 
            src={HERO_BG}
            alt="Solar Panel Background"
+           width="1920"
+           height="1080"
+           fetchPriority="high"
+           decoding="async"
            className="absolute inset-0 w-full h-full object-cover object-right lg:object-[80%_center] opacity-90"
            style={{ y }}
          />
@@ -134,6 +138,10 @@ export default function HeroSection() {
                <motion.img 
                  src={HERO_CARD} 
                  alt="Residential Solar Install" 
+                 width="900"
+                 height="1200"
+                 loading="lazy"
+                 decoding="async"
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                  style={{ y }}
                />

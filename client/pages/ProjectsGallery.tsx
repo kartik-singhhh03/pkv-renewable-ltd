@@ -132,6 +132,9 @@ export default function ProjectsGallery() {
                       src={img.img} 
                       alt={img.alt} 
                       onLoad={() => handleImageLoad(img.img)}
+                      width="600"
+                      height="400"
+                      decoding="async"
                       className={`w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-[1.05] ${loadedImages.has(img.img) ? 'opacity-100' : 'opacity-0'}`} 
                       loading="lazy"
                     />
@@ -183,7 +186,10 @@ export default function ProjectsGallery() {
                         src={project.img} 
                         alt={project.title} 
                         onLoad={() => handleImageLoad(project.img)}
+                        width="600"
+                        height="400"
                         loading="lazy"
+                        decoding="async"
                         className={`w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110 ${loadedImages.has(project.img) ? 'opacity-100' : 'opacity-0'}`} 
                       />
                       <div className="absolute inset-0 bg-solar-primary/0 group-hover:bg-solar-primary/10 transition-colors duration-500"></div>

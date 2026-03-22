@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
@@ -58,6 +58,10 @@ export default function Navbar() {
               <img 
                 src="/pkvlogo.png" 
                 alt="PKV Renewable" 
+                width="200"
+                height="80"
+                fetchPriority="high"
+                decoding="async"
                 className="h-14 sm:h-16 lg:h-20 w-auto object-contain scale-[1.1] sm:scale-[1.2] lg:scale-[1.5] origin-left" 
               />
             </Link>

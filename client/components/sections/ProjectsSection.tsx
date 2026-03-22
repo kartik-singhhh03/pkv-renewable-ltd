@@ -41,7 +41,7 @@ export default function ProjectsSection() {
             <div key={i} className="relative w-[300px] sm:w-[350px] md:w-[400px] h-[450px] rounded-[2rem] overflow-hidden cursor-pointer shadow-sm border border-gray-100 flex-shrink-0 group/card">
               
               <div className="absolute inset-0 overflow-hidden bg-gray-100">
-                <img src={p.img} alt={p.title} className="w-full h-full object-cover transform transition-transform duration-700 group-hover/card:scale-110" loading="lazy" />
+                <img src={p.img} alt={p.title} width="600" height="400" className="w-full h-full object-cover transform transition-transform duration-700 group-hover/card:scale-110" loading="lazy" decoding="async" />
               </div>
 
               {/* Gradient Overlay */}

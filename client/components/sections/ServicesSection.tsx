@@ -5,28 +5,28 @@ const services = [
   {
     title: 'Residential Rooftop Solar',
     desc: 'PM Surya Ghar subsidized solar systems for homes. 1–10 kW solutions.',
-    img: 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
     tag: '₹1.25L Subsidy',
     tagColor: 'text-[#d9a400] bg-white/95',
   },
   {
     title: 'Commercial Solar Systems',
     desc: 'High-ROI solar for factories, offices, and institutions. 10 kW–1 MW.',
-    img: 'https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: 'https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
     tag: '5–7 Year Payback',
     tagColor: 'text-[#3A906D] bg-white/95',
   },
   {
     title: 'Industrial Solar Systems',
     desc: 'Grid-tied + battery backup for 24/7 uninterrupted power supply.',
-    img: 'https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: 'https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
     tag: '24/7 Power',
     tagColor: 'text-[#2D98CE] bg-white/95',
   },
   {
     title: 'Solar EPC & Consultancy',
     desc: 'End-to-end engineering, procurement, construction, and subsidy filing.',
-    img: 'https://images.pexels.com/photos/6040783/pexels-photo-6040783.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: 'https://images.pexels.com/photos/6040783/pexels-photo-6040783.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
     tag: 'MNRE Approved',
     tagColor: 'text-purple-600 bg-white/95',
   },
@@ -63,6 +63,10 @@ export default function ServicesSection() {
                 <motion.img 
                   src={s.img} 
                   alt={s.title} 
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
                 />
                 

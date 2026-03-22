@@ -53,8 +53,12 @@ export default function AboutUs() {
               className="relative rounded-[2.5rem] overflow-hidden aspect-square lg:aspect-auto lg:h-[600px] shadow-2xl"
             >
               <img 
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2672&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=70&w=800&fm=webp&fit=crop" 
                 alt="Solar Panel Installation Bihar" 
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/40"></div>

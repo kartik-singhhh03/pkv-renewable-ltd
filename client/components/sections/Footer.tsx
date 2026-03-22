@@ -13,9 +13,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F2E2A] text-[#E6F4EF] pt-20 pb-8 px-4 sm:px-6 lg:px-8 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto relative">
-        
+
         {/* Back to Top Button Float */}
-        <motion.button 
+        <motion.button
           onClick={scrollToTop}
           whileHover={{ y: -5 }}
           className="absolute right-0 -top-28 hidden sm:flex bg-[#FBC92E] text-gray-900 p-4 rounded-full shadow-[0_10px_20px_rgba(251,201,46,0.3)] hover:bg-[#ffda5c] transition-colors z-10 border-4 border-white"
@@ -25,20 +25,24 @@ export default function Footer() {
         </motion.button>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Column 1: Company Info */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} className="lg:col-span-4 space-y-7">
             <div className="inline-flex bg-white px-6 py-4 rounded-2xl shadow-xl">
-              <img 
-                src="/pkvlogo.png" 
-                alt="PKV Renewable" 
-                className="h-10 md:h-12 w-auto object-contain scale-110 origin-left" 
+              <img
+                src="/pkvlogo.png"
+                alt="PKV Renewable"
+                width="160"
+                height="48"
+                loading="lazy"
+                decoding="async"
+                className="h-10 md:h-12 w-auto object-contain scale-110 origin-left"
               />
             </div>
             <p className="text-[#E6F4EF]/80 text-sm md:text-base leading-relaxed pr-4">
               Premium Solar EPC company in Bihar. Delivering subsidized rooftop solar installations with end-to-end engineering, procurement, and construction support.
             </p>
-            
+
             <div className="space-y-3 pt-2">
               {[
                 'MNRE Approved EPC',
@@ -54,9 +58,9 @@ export default function Footer() {
 
             <div className="flex gap-3 pt-4">
               {[
-                { s: 'FB', h: 'javascript:void(0)' }, 
-                { s: 'IG', h: 'javascript:void(0)' }, 
-                { s: 'YT', h: 'javascript:void(0)' }, 
+                { s: 'FB', h: 'javascript:void(0)' },
+                { s: 'IG', h: 'javascript:void(0)' },
+                { s: 'YT', h: 'javascript:void(0)' },
                 { s: 'WA', h: 'https://wa.me/918149034478' }
               ].map(({ s, h }) => (
                 <motion.a key={s} href={h} target={s === 'WA' ? '_blank' : '_self'} rel="noopener noreferrer" whileHover={{ scale: 1.15, y: -2 }}
@@ -94,11 +98,11 @@ export default function Footer() {
             <h4 className="text-white font-black mb-6 text-base tracking-widest">SOLAR SERVICES</h4>
             <ul className="space-y-4">
               {[
-                'Residential Rooftop Solar', 
-                'Commercial Solar Systems', 
-                'Industrial Solar Solutions', 
-                'End-to-End EPC', 
-                'PM Surya Ghar Subsidy', 
+                'Residential Rooftop Solar',
+                'Commercial Solar Systems',
+                'Industrial Solar Solutions',
+                'End-to-End EPC',
+                'PM Surya Ghar Subsidy',
                 'Net Metering Processing'
               ].map(s => (
                 <li key={s}>
@@ -114,7 +118,7 @@ export default function Footer() {
           {/* Column 4: Contact & CTA */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} viewport={{ once: false, amount: 0.15 }} className="lg:col-span-3 flex flex-col">
             <h4 className="text-white font-black mb-6 text-base tracking-widest">GET IN TOUCH</h4>
-            
+
             <ul className="space-y-5 mb-8 flex-1">
               <li>
                 <a href="tel:+918149034478" className="flex items-start gap-4 text-[#E6F4EF]/90 hover:text-white transition-colors group">
@@ -150,7 +154,7 @@ export default function Footer() {
             </ul>
 
             {/* Prominent CTA */}
-            <motion.a 
+            <motion.a
               href="/#contact"
               onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}
               whileHover={{ scale: 1.02 }}
@@ -168,7 +172,7 @@ export default function Footer() {
           <div className="text-center md:text-left space-y-1">
             <p>© {year} PKV Renewable Pvt Ltd. All rights reserved.</p>
             <p className="text-xs">
-              Crafted by <a href="https://www.linkedin.com/in/kartik-singh-879b6b288/" target="_blank" rel="noopener noreferrer" className="text-[#FBC92E] hover:text-[#ffda5c] hover:underline transition-colors font-bold">Kartik Singh</a>
+              Developed by <a href="https://www.linkedin.com/in/kartik-singh-879b6b288/" target="_blank" rel="noopener noreferrer" className="text-[#FBC92E] hover:text-[#ffda5c] hover:underline transition-colors font-bold">Kartik Singh</a>
             </p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">

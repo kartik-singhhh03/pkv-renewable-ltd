@@ -39,11 +39,10 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100'
+        : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 xl:h-24">
@@ -55,14 +54,12 @@ export default function Navbar() {
             className="flex-shrink-0 flex items-center pr-2 transition-transform hover:scale-[1.02]"
           >
             <Link to="/">
-              <img 
-                src="/pkvlogo.png" 
-                alt="PKV Renewable" 
-                width="200"
-                height="80"
+              <img
+                src="/pkvlogo.png"
+                alt="PKV Renewable"
                 fetchPriority="high"
                 decoding="async"
-                className="h-14 sm:h-16 lg:h-20 w-auto object-contain scale-[1.1] sm:scale-[1.2] lg:scale-[1.5] origin-left" 
+                className="h-16 lg:h-16 w-auto object-contain"
               />
             </Link>
           </motion.div>

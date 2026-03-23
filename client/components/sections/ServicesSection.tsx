@@ -6,7 +6,7 @@ const services = [
     title: 'Residential Rooftop Solar',
     desc: 'PM Surya Ghar subsidized solar systems for homes. 1–10 kW solutions.',
     img: 'https://images.pexels.com/photos/4254164/pexels-photo-4254164.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
-    tag: '₹1.25L Subsidy',
+    tag: '₹78,000 Subsidy',
     tagColor: 'text-[#d9a400] bg-white/95',
   },
   {
@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: 'Industrial Solar Systems',
-    desc: 'Grid-tied + battery backup for 24/7 uninterrupted power supply.',
+    desc: 'High-capacity solar solutions designed to reduce energy costs, improve efficiency, and support large-scale industrial operations.',
     img: 'https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
     tag: '24/7 Power',
     tagColor: 'text-[#2D98CE] bg-white/95',
@@ -57,22 +57,22 @@ export default function ServicesSection() {
           {services.map((s, i) => (
             <motion.div key={i} variants={iV}
               className="relative rounded-[1.5rem] overflow-hidden group cursor-pointer border border-gray-100 bg-white shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-out flex flex-col h-full active:scale-[0.98]">
-              
+
               {/* Top Image Container (Locked Aspect Ratio) */}
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 flex-shrink-0">
-                <motion.img 
-                  src={s.img} 
-                  alt={s.title} 
+                <motion.img
+                  src={s.img}
+                  alt={s.title}
                   width="800"
                   height="600"
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
-                
+
                 {/* Overlay: Slight dark gradient on hover for premium depth */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out z-0 pointer-events-none" />
-                
+
                 {/* Glass Tag Badge */}
                 <div className="absolute top-4 left-4 z-10">
                   <span className={`inline-block ${s.tagColor} backdrop-blur-md border border-white/40 text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-sm`}>
@@ -85,10 +85,10 @@ export default function ServicesSection() {
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-gray-900 font-bold text-[1.15rem] mb-3 leading-tight" style={{ fontFamily: 'Sora' }}>{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6 font-medium flex-1">{s.desc}</p>
-                
-                {/* Hover-triggered Learn More */ }
+
+                {/* Hover-triggered Learn More */}
                 <div className="flex items-center gap-1.5 text-[#3A906D] font-bold text-sm transition-colors duration-300 ease-out group-hover:text-[#2b7255]">
-                  Learn More 
+                  Learn More
                   <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1 border border-transparent rounded-full" />
                 </div>
               </div>

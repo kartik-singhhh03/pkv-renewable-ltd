@@ -14,6 +14,11 @@ const SolarSubsidy = lazy(() => import("./pages/SolarSubsidy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const ProjectsGallery = lazy(() => import("./pages/ProjectsGallery"));
+const PMSuryaGhar = lazy(() => import("./pages/PMSuryaGhar"));
+const OnGridSystem = lazy(() => import("./pages/OnGridSystem"));
+const SolarCapacityGuide = lazy(() => import("./pages/SolarCapacityGuide"));
+const InstallationProcess = lazy(() => import("./pages/InstallationProcess"));
+const SolarLoan = lazy(() => import("./pages/SolarLoan"));
 
 const queryClient = new QueryClient();
 
@@ -30,6 +35,11 @@ const App = () => (
             <Route path="/about" element={<AboutUs />} />
             <Route path="/projects" element={<ProjectsGallery />} />
             <Route path="/solar-subsidy" element={<SolarSubsidy />} />
+            <Route path="/pm-surya-ghar-yojana" element={<PMSuryaGhar />} />
+            <Route path="/on-grid-solar-system" element={<OnGridSystem />} />
+            <Route path="/solar-capacity-guide" element={<SolarCapacityGuide />} />
+            <Route path="/installation-process" element={<InstallationProcess />} />
+            <Route path="/solar-loan" element={<SolarLoan />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

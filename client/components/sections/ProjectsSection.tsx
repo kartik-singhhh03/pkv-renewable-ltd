@@ -3,7 +3,7 @@ import { ChevronRight, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const projects = [
-  { img: '/indus1.jpeg', title: '1.3 MW Industrial Plant', loc: 'Patna, Bihar', size: '1.3 MW', tag: 'Industrial' },
+  { img: '/indus1.jpeg', title: '1.3 MW Industrial Plant', loc: 'Sugauli, Bihar', size: '1.3 MW', tag: 'Industrial' },
   { img: '/5kw Hybrid Residential.jpeg', title: '5 kW Industrial System', loc: 'Muzaffarpur, Bihar', size: '5 kW', tag: 'Residential' },
   { img: '/indus2.jpeg', title: 'Commercial Rooftop Solar', loc: 'Gaya, Bihar', size: '500 kW', tag: 'Commercial' },
   { img: '/20kw Hybrid Solar System.jpeg', title: '20 kW Solar System for Hospital', loc: 'Bettiah, Bihar', size: '20 kW', tag: 'Commercial' },

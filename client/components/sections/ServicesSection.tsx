@@ -19,7 +19,7 @@ const services = [
   {
     title: 'Industrial Solar Systems',
     desc: 'High-capacity solar solutions designed to reduce energy costs, improve efficiency, and support large-scale industrial operations.',
-    img: 'https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp&q=70',
+    img: '/industrial-image2.png',
     tag: '24/7 Power',
     tagColor: 'text-[#2D98CE] bg-white/95',
   },
@@ -86,10 +86,10 @@ export default function ServicesSection() {
                 <h3 className="text-gray-900 font-bold text-[1.15rem] mb-3 leading-tight" style={{ fontFamily: 'Sora' }}>{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6 font-medium flex-1">{s.desc}</p>
 
-                {/* Hover-triggered Learn More */}
+                {/* Hover-triggered Powered by PKV */}
                 <div className="flex items-center gap-1.5 text-[#3A906D] font-bold text-sm transition-colors duration-300 ease-out group-hover:text-[#2b7255]">
-                  Learn More
-                  <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1 border border-transparent rounded-full" />
+                  Powered by PKV
+
                 </div>
               </div>
 

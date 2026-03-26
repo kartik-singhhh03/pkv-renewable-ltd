@@ -39,7 +39,7 @@ export default function SolarSubsidy() {
            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 bg-[#FBC92E]/15 text-[#d9a400] rounded-full font-bold uppercase tracking-widest text-xs mb-6 shadow-sm border border-[#FBC92E]/30">
              <Landmark className="w-4 h-4" /> Official Subsidy Guide
            </motion.div>
-           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl sm:text-6xl lg:text-[72px] font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight" style={{ fontFamily: 'Sora' }}>
+           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl sm:text-6xl lg:text-[72px] font-bold text-gray-900 leading-[1.4] mb-6" style={{ fontFamily: 'Sora' }}>
              PM Surya Ghar Solar Subsidy in Bihar
            </motion.h1>
            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -108,7 +108,7 @@ export default function SolarSubsidy() {
                    <div className="w-14 h-14 mx-auto bg-solar-primary/5 rounded-full flex items-center justify-center mb-4">
                      <item.i className="w-6 h-6 text-solar-primary" />
                    </div>
-                   <h4 className="font-bold text-gray-900 leading-tight">{item.t}</h4>
+                   <h4 className="font-bold text-gray-900 leading-[1.4]">{item.t}</h4>
                  </div>
               ))}
            </div>

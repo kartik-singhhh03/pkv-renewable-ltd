@@ -58,12 +58,12 @@ export default function Footer() {
 
             <div className="flex gap-3 pt-4">
               {[
-                { s: 'FB', h: 'javascript:void(0)' },
+                { s: 'FB', h: 'https://www.facebook.com/people/PKV-Renewable-Private-Limited/61586493276668/' },
                 { s: 'IG', h: 'javascript:void(0)' },
                 { s: 'YT', h: 'javascript:void(0)' },
                 { s: 'WA', h: 'https://wa.me/918149034478' }
               ].map(({ s, h }) => (
-                <motion.a key={s} href={h} target={s === 'WA' ? '_blank' : '_self'} rel="noopener noreferrer" whileHover={{ scale: 1.15, y: -2 }}
+                <motion.a key={s} href={h} target={h.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer" whileHover={{ scale: 1.15, y: -2 }}
                   className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#E6F4EF] text-sm font-bold hover:bg-[#68B953] hover:border-[#68B953] hover:text-white transition-all shadow-sm">
                   {s}
                 </motion.a>

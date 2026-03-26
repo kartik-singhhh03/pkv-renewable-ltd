@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
@@ -21,7 +21,17 @@ export default function Navbar() {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/#services' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Solar Subsidy', href: '/solar-subsidy' },
+    { 
+      label: 'Resources', 
+      dropdown: [
+        { label: 'Solar Subsidy Guide', href: '/solar-subsidy' },
+        { label: 'PM Surya Ghar Yojana', href: '/pm-surya-ghar-yojana' },
+        { label: 'On-Grid Solar System', href: '/on-grid-solar-system' },
+        { label: 'Solar Capacity Guide', href: '/solar-capacity-guide' },
+        { label: 'Installation Process', href: '/installation-process' },
+        { label: 'Solar Loan Guide', href: '/solar-loan' }
+      ]
+    },
     { label: 'Contact', href: '/#contact' },
   ];
 
@@ -77,15 +87,40 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.07 }}
+                className="relative group"
               >
-                <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="font-bold text-sm xl:text-base transition-all relative group text-gray-700 hover:text-solar-primary"
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
-                </a>
+                {item.dropdown ? (
+                   <div className="py-2">
+                     <button className="font-bold text-sm xl:text-base transition-all relative group-hover:text-solar-primary text-gray-700 flex items-center gap-1.5 focus:outline-none">
+                       {item.label}
+                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
+                     </button>
+                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
+                       <div className="p-2 space-y-1">
+                         {item.dropdown.map((dropItem) => (
+                           <a
+                             key={dropItem.href}
+                             href={dropItem.href}
+                             onClick={(e) => handleNavClick(e, dropItem.href)}
+                             className="block px-4 py-3 text-sm font-bold text-gray-700 hover:text-solar-primary hover:bg-green-50/50 rounded-xl transition-colors"
+                           >
+                             {dropItem.label}
+                           </a>
+                         ))}
+                       </div>
+                     </div>
+                   </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href!)}
+                    className="font-bold text-sm xl:text-base transition-all relative group text-gray-700 hover:text-solar-primary py-2 block"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-solar-primary group-hover:w-full transition-all duration-300 rounded-full" />
+                  </a>
+                )}
               </motion.div>
             ))}
           </motion.div>
@@ -141,15 +176,37 @@ export default function Navbar() {
             >
               <div className="px-5 py-6 space-y-2">
                 {navItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
-                    className="block px-4 py-3.5 text-gray-700 hover:text-solar-primary hover:bg-gray-50 rounded-2xl transition-all font-bold text-base"
-                    style={{ fontFamily: 'Sora' }}
-                  >
-                    {item.label}
-                  </a>
+                  <div key={item.label}>
+                    {item.dropdown ? (
+                      <div className="space-y-1">
+                        <div className="px-4 py-3.5 text-gray-900 font-bold text-base flex items-center justify-between" style={{ fontFamily: 'Sora' }}>
+                          {item.label}
+                          <ChevronDown className="w-5 h-5 text-gray-400" />
+                        </div>
+                        <div className="pl-6 pr-2 pb-2 space-y-1 border-l-2 border-gray-100 ml-6">
+                          {item.dropdown.map((dropItem) => (
+                            <a
+                              key={dropItem.href}
+                              href={dropItem.href}
+                              onClick={(e) => handleNavClick(e, dropItem.href)}
+                              className="block px-4 py-3 text-gray-600 hover:text-solar-primary hover:bg-gray-50 rounded-2xl transition-all font-bold text-sm"
+                            >
+                              {dropItem.label}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.href}
+                        onClick={(e) => handleNavClick(e, item.href!)}
+                        className="block px-4 py-3.5 text-gray-700 hover:text-solar-primary hover:bg-gray-50 rounded-2xl transition-all font-bold text-base"
+                        style={{ fontFamily: 'Sora' }}
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </div>
                 ))}
                 <div className="pt-5 mt-2 border-t border-gray-100">
                   <a

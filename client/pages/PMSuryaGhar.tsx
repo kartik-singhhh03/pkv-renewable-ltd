@@ -57,30 +57,30 @@ export default function PMSuryaGhar() {
   return (
     <div className="overflow-x-hidden bg-[#FAFDFA] font-sans">
       <Navbar />
-      
+
       {/* 1. HERO SECTION */}
       <section className="pt-32 lg:pt-44 pb-20 bg-gradient-to-b from-[#EDF6F1] to-[#FAFDFA] relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#3A906D]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-20 w-80 h-80 bg-[#FBC92E]/10 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
-           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="inline-flex items-center gap-2 px-6 py-2 bg-white text-[#3A906D] rounded-full font-bold uppercase tracking-widest text-xs md:text-sm mb-8 shadow-sm border border-[#3A906D]/20">
-             <Sun className="w-4 h-4 text-[#FBC92E]" /> PM Surya Ghar Muft Bijli Yojana
-           </motion.div>
-           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.6] mb-6 font-sora">
-             PM Surya Ghar Yojana 2026: <br className="hidden md:block"/> <span className="text-[#3A906D]">₹78,000 तक सब्सिडी</span> के साथ फ्री सोलर सिस्टम कैसे लगवाएँ?
-           </motion.h1>
-           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">
-             PKV Renewable के साथ आसान और सुरक्षित सोलर इंस्टॉलेशन। Bihar में अपने घर के लिए best rooftop solar solution चुनें और आज ही अपनी electricity bill बचाएं।
-           </motion.p>
-           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-             <Link to="/#contact" className="px-8 py-4 bg-[#3A906D] text-white font-bold rounded-full shadow-[0_10px_20px_rgba(58,144,109,0.2)] hover:shadow-[0_15px_30px_rgba(58,144,109,0.3)] hover:-translate-y-1 transition-all flex items-center gap-2 text-lg">
-               <PhoneCall className="w-5 h-5" /> Free Consultation
-             </Link>
-             <a href="https://wa.me/918149034478?text=Hello%20PKV%20Renewable,%20I%20want%20to%20know%20more%20about%20PM%20Surya%20Ghar%20Yojana." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white border-2 border-[#25D366] text-[#25D366] font-bold rounded-full hover:bg-[#25D366] hover:text-white transition-all shadow-[0_10px_20px_rgba(37,211,102,0.1)] hover:-translate-y-1 flex items-center gap-2 text-lg">
-               <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6" /> WhatsApp Now
-             </a>
-           </motion.div>
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="inline-flex items-center gap-2 px-6 py-2 bg-white text-[#3A906D] rounded-full font-bold uppercase tracking-widest text-xs md:text-sm mb-8 shadow-sm border border-[#3A906D]/20">
+            <Sun className="w-4 h-4 text-[#FBC92E]" /> PM Surya Ghar Muft Bijli Yojana
+          </motion.div>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.6] mb-6 font-sora">
+            PM Surya Ghar Yojana 2026: <br className="hidden md:block" /> <span className="text-[#3A906D]">₹78,000 तक सब्सिडी</span> के साथ फ्री सोलर सिस्टम कैसे लगवाएँ?
+          </motion.h1>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">
+            PKV Renewable के साथ आसान और सुरक्षित सोलर इंस्टॉलेशन। Bihar में अपने घर के लिए best rooftop solar solution चुनें और आज ही अपनी electricity bill बचाएं।
+          </motion.p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <Link to="/#contact" className="px-8 py-4 bg-[#3A906D] text-white font-bold rounded-full shadow-[0_10px_20px_rgba(58,144,109,0.2)] hover:shadow-[0_15px_30px_rgba(58,144,109,0.3)] hover:-translate-y-1 transition-all flex items-center gap-2 text-lg">
+              <PhoneCall className="w-5 h-5" /> Free Consultation
+            </Link>
+            <a href="https://wa.me/918149034478?text=Hello%20PKV%20Renewable,%20I%20want%20to%20know%20more%20about%20PM%20Surya%20Ghar%20Yojana." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white border-2 border-[#25D366] text-[#25D366] font-bold rounded-full hover:bg-[#25D366] hover:text-white transition-all shadow-[0_10px_20px_rgba(37,211,102,0.1)] hover:-translate-y-1 flex items-center gap-2 text-lg">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6" /> WhatsApp Now
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -127,14 +127,12 @@ export default function PMSuryaGhar() {
               ))}
             </ul>
           </div>
-          
+
           {/* IMAGE PLACEHOLDER FOR BANANA PRO PROMPT */}
           <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[500px] border border-gray-100 group">
-            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&auto=format&fit=crop&q=80" alt="Solar Installation India" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="/pm-shurya-image.png" alt="Solar Installation India" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-8">
-              <div className="text-white/80 text-xs font-mono bg-black/50 p-3 rounded-lg backdrop-blur-md mb-2 border border-white/20">
-                <span className="text-[#FBC92E] font-bold">Image Prompt:</span> "realistic indian middle class house rooftop solar panels installation, bright sunlight, technician working, बिहार का घर, ultra realistic, 4k"
-              </div>
+
             </div>
             <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-6 py-3 rounded-2xl font-bold text-gray-900 shadow-lg flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-[#3A906D]" /> 25 Years Warranty
@@ -191,45 +189,45 @@ export default function PMSuryaGhar() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Eligibility */}
           <div className="bg-white p-10 rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] selection:bg-[#FBC92E]/30 relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-40 h-40 bg-[#3A906D]/5 rounded-bl-[100px] -mr-10 -mt-10" />
-             <div className="flex items-center gap-4 mb-8 relative z-10">
-               <div className="w-12 h-12 bg-[#3A906D] text-white rounded-xl flex items-center justify-center shadow-lg">
-                 <Home className="w-6 h-6" />
-               </div>
-               <h3 className="text-2xl font-bold font-sora text-gray-900">कौन अप्लाई कर सकता है?</h3>
-             </div>
-             <ul className="space-y-5 relative z-10">
-               {[
-                 "भारत का निवासी हो (विशेषकर बिहार के निवासियों के लिए हमारी सर्विस उपलब्ध है)",
-                 "घर की अपनी छत हो जहाँ पर्याप्त धूप आती हो",
-                 "आवेदक के नाम पर एक वैध बिजली कनेक्शन (Electricity Bill) हो",
-                 "DISCOM के माध्यम से नेट मीटरिंग की पात्रता हो"
-               ].map((item, idx) => (
-                 <li key={idx} className="flex items-start gap-3">
-                   <CheckCircle2 className="w-6 h-6 text-[#3A906D] flex-shrink-0 mt-0.5" />
-                   <span className="text-gray-700 font-medium text-lg">{item}</span>
-                 </li>
-               ))}
-             </ul>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#3A906D]/5 rounded-bl-[100px] -mr-10 -mt-10" />
+            <div className="flex items-center gap-4 mb-8 relative z-10">
+              <div className="w-12 h-12 bg-[#3A906D] text-white rounded-xl flex items-center justify-center shadow-lg">
+                <Home className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold font-sora text-gray-900">कौन अप्लाई कर सकता है?</h3>
+            </div>
+            <ul className="space-y-5 relative z-10">
+              {[
+                "भारत का निवासी हो (विशेषकर बिहार के निवासियों के लिए हमारी सर्विस उपलब्ध है)",
+                "घर की अपनी छत हो जहाँ पर्याप्त धूप आती हो",
+                "आवेदक के नाम पर एक वैध बिजली कनेक्शन (Electricity Bill) हो",
+                "DISCOM के माध्यम से नेट मीटरिंग की पात्रता हो"
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#3A906D] flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700 font-medium text-lg">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Documents */}
           <div className="bg-[#3A906D] text-white p-10 rounded-3xl shadow-xl relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-             <div className="flex items-center gap-4 mb-8 relative z-10">
-               <div className="w-12 h-12 bg-white text-[#3A906D] rounded-xl flex items-center justify-center shadow-lg">
-                 <FileText className="w-6 h-6" />
-               </div>
-               <h3 className="text-2xl font-bold font-sora text-white">कौन-कौन से डॉक्यूमेंट चाहिए?</h3>
-             </div>
-             <ul className="space-y-4 relative z-10">
-               {documents.map((doc, idx) => (
-                 <li key={idx} className="flex items-center gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                   <div className="w-2 h-2 rounded-full bg-[#FBC92E]" />
-                   <span className="font-bold text-lg">{doc}</span>
-                 </li>
-               ))}
-             </ul>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            <div className="flex items-center gap-4 mb-8 relative z-10">
+              <div className="w-12 h-12 bg-white text-[#3A906D] rounded-xl flex items-center justify-center shadow-lg">
+                <FileText className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold font-sora text-white">कौन-कौन से डॉक्यूमेंट चाहिए?</h3>
+            </div>
+            <ul className="space-y-4 relative z-10">
+              {documents.map((doc, idx) => (
+                <li key={idx} className="flex items-center gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+                  <div className="w-2 h-2 rounded-full bg-[#FBC92E]" />
+                  <span className="font-bold text-lg">{doc}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -241,7 +239,7 @@ export default function PMSuryaGhar() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 font-sora">आवेदन की आसान प्रक्रिया</h2>
             <p className="text-gray-500 text-lg font-medium max-w-2xl mx-auto">PKV Renewable के साथ सोलर लगवाना बेहद आसान है। हम आपके लिए पोर्टल रजिस्ट्रेशन से लेकर सब्सिडी क्रेडिट तक सब कुछ संभालते हैं।</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             {/* Connecting lines for desktop */}
             <div className="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-1 bg-gray-100 rounded-full z-0 overflow-hidden">
@@ -285,11 +283,11 @@ export default function PMSuryaGhar() {
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 font-sora">आपके सवाल, हमारे जवाब</h2>
           </div>
-          
+
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 className={`bg-white border rounded-2xl p-6 md:p-8 cursor-pointer transition-all duration-300 ${openFaq === i ? 'border-[#3A906D] shadow-[0_10px_30px_rgba(58,144,109,0.1)]' : 'border-gray-200 hover:border-[#3A906D]/40'}`}
               >
@@ -316,28 +314,28 @@ export default function PMSuryaGhar() {
 
       {/* 8. FINAL CTA */}
       <section className="py-24 px-4 bg-white text-center border-t border-gray-100">
-         <div className="max-w-5xl mx-auto bg-[#1A1A1A] p-12 sm:p-20 rounded-[3rem] shadow-2xl relative overflow-hidden">
-           {/* Abstract shapes */}
-           <div className="absolute top-0 right-0 w-80 h-80 bg-[#3A906D]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
-           <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FBC92E]/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
-           
-           <div className="relative z-10">
-             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-sora leading-[1.6]">
-               आज ही <span className="text-[#3A906D]">Solar</span> लगवाएँ!
-             </h2>
-             <p className="text-xl text-gray-400 mb-12 font-medium max-w-2xl mx-auto">
-               फ्री कन्सल्टेशन और साइट विजिट बुक करने के लिए अभी हमसे संपर्क करें। 
-             </p>
-             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="tel:+918149034478" className="w-full sm:w-auto px-10 py-5 bg-[#3A906D] text-white font-bold rounded-full hover:bg-white hover:text-[#3A906D] shadow-[0_10px_30px_rgba(58,144,109,0.3)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
-                  <PhoneCall className="w-6 h-6" /> +91 81490 34478
-                </a>
-                <a href="https://wa.me/918149034478" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-5 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#1ebd5b] shadow-[0_10px_30px_rgba(37,211,102,0.3)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6 shadow-sm" /> WhatsApp Now
-                </a>
-             </div>
-           </div>
-         </div>
+        <div className="max-w-5xl mx-auto bg-[#1A1A1A] p-12 sm:p-20 rounded-[3rem] shadow-2xl relative overflow-hidden">
+          {/* Abstract shapes */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#3A906D]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FBC92E]/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
+
+          <div className="relative z-10">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-sora leading-[1.6]">
+              आज ही <span className="text-[#3A906D]">Solar</span> लगवाएँ!
+            </h2>
+            <p className="text-xl text-gray-400 mb-12 font-medium max-w-2xl mx-auto">
+              फ्री कन्सल्टेशन और साइट विजिट बुक करने के लिए अभी हमसे संपर्क करें।
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+              <a href="tel:+918149034478" className="w-full sm:w-auto px-10 py-5 bg-[#3A906D] text-white font-bold rounded-full hover:bg-white hover:text-[#3A906D] shadow-[0_10px_30px_rgba(58,144,109,0.3)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
+                <PhoneCall className="w-6 h-6" /> +91 81490 34478
+              </a>
+              <a href="https://wa.me/918149034478" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-5 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#1ebd5b] shadow-[0_10px_30px_rgba(37,211,102,0.3)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6 shadow-sm" /> WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />

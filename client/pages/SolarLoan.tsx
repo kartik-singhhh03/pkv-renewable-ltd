@@ -173,22 +173,15 @@ export default function SolarLoan() {
          </div>
       </section>
 
-      {/* 5. IMAGE PLACEHOLDER FOR BANANA PRO */}
+      {/* 5. IMAGE SECTION */}
       <section className="py-16 px-4 bg-white border-b border-gray-100">
-         <div className="max-w-5xl mx-auto relative rounded-[2.5rem] bg-[#FAFDFA] border-2 border-dashed border-[#FBC92E]/40 p-8 md:p-12 flex items-center justify-center min-h-[400px] overflow-hidden group shadow-inner">
-             <div className="absolute inset-0 bg-gradient-to-t from-[#FBC92E]/5 to-transparent" />
-             <div className="relative z-10 text-center">
-               <div className="inline-flex bg-white p-5 rounded-full shadow-md text-[#FBC92E] mb-6">
-                 <Handshake className="w-10 h-10" />
-               </div>
-               <h3 className="text-2xl font-bold text-gray-900 font-sora mb-6">Visual Infographic Placeholder</h3>
-               <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-gray-200 shadow-lg inline-block w-full max-w-2xl text-left">
-                 <div className="text-xs font-mono text-gray-500 mb-2 font-bold uppercase tracking-widest border-b pb-2">Banana Pro Prompt</div>
-                 <p className="text-gray-800 font-medium leading-relaxed italic">
-                   "indian bank officer discussing solar loan with homeowner, documents and solar house background, realistic, bright daylight, cinematic 4k"
-                 </p>
-               </div>
-             </div>
+         <div className="max-w-5xl mx-auto relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100">
+           <img
+             src="/loan-guide-image.png"
+             alt="Solar Loan Guide - Bank Officer discussing solar financing with homeowner"
+             className="w-full h-auto object-cover"
+             loading="lazy"
+           />
          </div>
       </section>
 

@@ -8,11 +8,11 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const capacityTable = [
-  { capacity: '1 kW', space: '60 sq.ft. (8x7.5)', units: '100-120 यूनिट्स', appxUsage: 'छोटे घर (2-3 पंखे, 4 लाइट, 1 टीवी)' },
-  { capacity: '2 kW', space: '120 sq.ft. (8x15)', units: '200-240 यूनिट्स', appxUsage: 'मध्यम घर (1 कूलर, फ्रिज, पंखे, लाइट)' },
-  { capacity: '3 kW', space: '180 sq.ft. (12x15)', units: '300-360 यूनिट्स', appxUsage: 'बड़े घर (1 AC, फ्रिज, टीवी, वॉशिंग मशीन)' },
-  { capacity: '5 kW', space: '300 sq.ft. (15x20)', units: '500-600 यूनिट्स', appxUsage: 'दुकानें, बड़े घर (2 AC, मोटर, हीटर)' },
-  { capacity: '8 kW', space: '480 sq.ft. (32x15)', units: '800-960 यूनिट्स', appxUsage: 'छोटे ऑफिस, 3-4 AC का उपयोग' },
+  { capacity: '1 kW', space: '100 sq.ft. (8x7.5)', units: '100-120 यूनिट्स', appxUsage: 'छोटे घर (2-3 पंखे, 4 लाइट, 1 टीवी)' },
+  { capacity: '2 kW', space: '200 sq.ft. (8x15)', units: '200-240 यूनिट्स', appxUsage: 'मध्यम घर (1 कूलर, फ्रिज, पंखे, लाइट)' },
+  { capacity: '3 kW', space: '300 sq.ft. (12x15)', units: '300-360 यूनिट्स', appxUsage: 'बड़े घर (1 AC, फ्रिज, टीवी, वॉशिंग मशीन)' },
+  { capacity: '5 kW', space: '400 sq.ft. (15x20)', units: '500-600 यूनिट्स', appxUsage: 'दुकानें, बड़े घर (2 AC, मोटर, हीटर)' },
+  { capacity: '8 kW', space: '500 sq.ft. (32x15)', units: '800-960 यूनिट्स', appxUsage: 'छोटे ऑफिस, 3-4 AC का उपयोग' },
   { capacity: '10 kW', space: '600 sq.ft. (30x20)', units: '1000-1200 यूनिट्स', appxUsage: 'बड़े ऑफिस, कमर्शियल भवन' },
 ];
 
@@ -165,12 +165,12 @@ export default function SolarCapacityGuide() {
               <h3 className="text-2xl font-bold font-sora text-gray-900 mb-4 relative z-10">खर्च कितना आएगा?</h3>
               <p className="text-gray-600 text-lg leading-relaxed font-medium relative z-10 mb-6">
                 PM Surya Ghar योजना के अंतर्गत आपको భారీ सब्सिडी मिलती है।
-                उदाहरण के तौर पर अगर <span className="font-bold text-gray-900">3kW</span> सिस्टम की कीमत ₹1,50,000 के आसपास है, तो ₹78,000 सीधा आपके अकाउंट में सरकार द्वारा सब्सिडी के रूप में आएगा।
+                उदाहरण के तौर पर अगर <span className="font-bold text-gray-900">3kW</span> सिस्टम की कीमत ₹2,00,000 के आसपास है, तो ₹78,000 सीधा आपके अकाउंट में सरकार द्वारा सब्सिडी के रूप में आएगा।
               </p>
               <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative z-10">
-                <p className="font-bold text-gray-800 text-lg flex justify-between mb-2"><span>कुल अनुमानित खर्च (3kW):</span> <span>₹1,50,000+</span></p>
+                <p className="font-bold text-gray-800 text-lg flex justify-between mb-2"><span>कुल अनुमानित खर्च (3kW):</span> <span>₹2,00,000+</span></p>
                 <p className="font-bold text-[#3A906D] text-lg flex justify-between mb-4 border-b border-gray-200 pb-4"><span>सरकारी सब्सिडी मिलेगी:</span> <span>- ₹78,000</span></p>
-                <p className="font-extrabold text-gray-900 text-xl flex justify-between"><span>आपको असल में देना है मात्र:</span> <span>~ ₹72,000*</span></p>
+                <p className="font-extrabold text-gray-900 text-xl flex justify-between"><span>आपको असल में देना है मात्र:</span> <span>~ ₹1,22,000*</span></p>
               </div>
             </div>
 
